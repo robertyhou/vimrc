@@ -17,14 +17,7 @@ imap jj  <Esc>
 set ignorecase
 set smartcase
 
-"sets relative line number
-:set number relativenumber
-"toggles so that relative when moving, absolute in focus
-:augroup numbertoggle
-:  autocmd!
-:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-:augroup END
+set number
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
